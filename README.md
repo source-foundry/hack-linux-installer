@@ -4,6 +4,13 @@
 
 The [`hack-linux-installer.sh` shell script](https://github.com/source-foundry/hack-linux-installer/blob/master/hack-linux-installer.sh) installs fonts from the [Hack typeface repository](https://github.com/source-foundry/Hack) at a requested release version number on the Linux platform.  This script can be used for initial font installs and upgrades to new versions (or downgrades if ever necessary).
 
+#### Download and modify permissions
+
+```
+$ curl -L -O https://raw.githubusercontent.com/source-foundry/hack-linux-installer/master/hack-linux-installer.sh
+$ chmod +x hack-linux-installer.sh
+```
+
 #### Usage
 
 ```
