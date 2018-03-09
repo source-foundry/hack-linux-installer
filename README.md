@@ -31,5 +31,5 @@ $ ./hack-linux-installer.sh v3.003
 - The release archive is unpacked
 - The fonts are installed on the path `$HOME/.local/share/fonts`
 - The font cache is cleared and regenerated
-- `fc-list | grep "Hack"` is executed to display the installed font paths.  You should see valid output from this command.
+- `fc-list | grep "Hack"` is executed to display the installed font paths.  You should see expected install filepaths with this command.
 
