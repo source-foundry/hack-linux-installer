@@ -1,8 +1,8 @@
-## Hack Font Installer for Linux
+## Hack font installer for Linux
 
 ### An install and upgrade script for the Hack typeface on the Linux platform
 
-The `hack-linux-installer.sh` shell script installs fonts from the [Hack typeface repository](https://github.com/source-foundry/Hack) at a requested release version number on the Linux platform.  This script can be used for initial font installs and upgrades to new versions (or downgrades if ever necessary).
+The [`hack-linux-installer.sh` shell script](https://github.com/source-foundry/hack-linux-installer/blob/master/hack-linux-installer.sh) installs fonts from the [Hack typeface repository](https://github.com/source-foundry/Hack) at a requested release version number on the Linux platform.  This script can be used for initial font installs and upgrades to new versions (or downgrades if ever necessary).
 
 #### Usage
 
@@ -12,7 +12,7 @@ $ ./hack-linux-installer.sh [VERSION]
 
 Define the version number with the format `vX.XXX`.  You must use a lowercase `v` followed by the version number string that is used in the repository releases.
 
-For instance, to install Hack v3.003, you use the following command:
+For example, install Hack v3.003 with the following command:
 
 ```
 $ ./hack-linux-installer.sh v3.003
