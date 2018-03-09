@@ -81,7 +81,7 @@ if [ -d "ttf" ]; then
     fc-cache -f -v
 
     echo " "
-    echo "Testing. You should see valid install filepaths in the output below..."
+    echo "Testing. You should see the expected install filepaths in the output below..."
     fc-list | grep "Hack"
 
     echo " "
