@@ -1,5 +1,7 @@
 ## Hack font installer for Linux
 
+[![Build Status](https://semaphoreci.com/api/v1/sourcefoundry/hack-linux-installer/branches/master/badge.svg)](https://semaphoreci.com/sourcefoundry/hack-linux-installer)
+
 ### An install and upgrade script for the Hack typeface on the Linux platform
 
 The [`hack-linux-installer.sh` shell script](https://github.com/source-foundry/hack-linux-installer/blob/master/hack-linux-installer.sh) installs fonts from the [Hack typeface repository](https://github.com/source-foundry/Hack) at a requested release version number on the Linux platform.  This script can be used for initial font installs and upgrades to new versions (or downgrades if ever necessary).
