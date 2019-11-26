@@ -10,20 +10,26 @@
 #  MIT License
 #
 #  Usage: ./hack-linux-installer.sh [VERSION]
-#         Format the version number as vX.XXX
+#         Format the version number as vX.XXX or latest
 #
 # /////////////////////////////////////////////////////////////////
 
 HACK_INSTALL_PATH="$HOME/.local/share/fonts"
 
+get_latest_release() {
+  curl -s "https://api.github.com/repos/source-foundry/Hack/releases/latest" |
+    grep '"tag_name":' |
+    sed -E 's/.*"([^"]+)".*/\1/'
+}
+
 if [ $# -ne 1 ]; then
-    echo "Please include a version number argument formatted as vX.XXX"
+    echo "Please include a version number argument formatted as vX.XXX (or latest)"
     exit 1
 fi
 
 if [ "$1" = "--help" ]; then
     echo "Usage: ./hack-linux-installer [VERSION]"
-    echo "Format [VERSION] as vX.XXX for the desired release version of the fonts."
+    echo "Format [VERSION] as vX.XXX for the desired release version of the fonts. Or just set it to \"latest\"."
     exit 0
 fi
 
@@ -32,7 +38,11 @@ if [ ! -d "$HACK_INSTALL_PATH" ]; then
     exit 1
 fi
 
-HACK_VERSION="$1"
+HACK_VERSION="${1:-latest}"
+if [ "$HACK_VERSION" = "latest" ]
+then
+  HACK_VERSION="$(get_latest_release)"
+fi
 HACK_DL_URL="https://github.com/source-foundry/Hack/releases/download/$HACK_VERSION/Hack-$HACK_VERSION-ttf.tar.gz"
 HACK_ARCHIVE_PATH="Hack-$HACK_VERSION-ttf.tar.gz"
 
