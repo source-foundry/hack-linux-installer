@@ -10,7 +10,7 @@
 #  MIT License
 #
 #  Usage: ./hack-linux-installer.sh [VERSION]
-#         Format the version number as vX.XXX or latest
+#         Format the version number as vX.XXX or "latest"
 #
 # /////////////////////////////////////////////////////////////////
 
@@ -23,7 +23,7 @@ get_latest_release() {
 }
 
 if [ $# -ne 1 ]; then
-    echo "Please include a version number argument formatted as vX.XXX (or latest)"
+    echo "Please include a version number argument formatted as vX.XXX (or \"latest\")"
     exit 1
 fi
 
