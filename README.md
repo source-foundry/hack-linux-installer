@@ -27,6 +27,12 @@ For example, install Hack v3.003 with the following command:
 $ ./hack-linux-installer.sh v3.003
 ```
 
+Alternatively, you can use the installer to install the latest version like so:
+
+```
+$ ./hack-linux-installer.sh latest
+```
+
 #### What it does
 
 - The release archive is pulled from the repository release
